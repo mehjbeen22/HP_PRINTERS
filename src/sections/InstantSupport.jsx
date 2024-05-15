@@ -6,7 +6,7 @@ import BuildIcon from '@mui/icons-material/Build';
 
 const InstantSupport = () => {
   return (
-    <div className=" my-10 grid grid-cols-2 md:grid-cols-4 gap-2 px-4 md:px-16 py-8 bg-[#38bdf8]">
+    <div className="  grid grid-cols-2 md:grid-cols-4 gap-2 px-4 md:px-16 py-8 bg-[#38bdf8]">
       <div
         className="bg-white rounded-lg px-2 py-3 border md:py-2 flex flex-col items-center
        text-[#0ea5e9] transform hover:scale-105"
