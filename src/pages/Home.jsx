@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <div className=" flex justify-center items-center px-8 py-10 bg-[#38bdf8]">
         <div className="aboutCase flex  w-full shadow-md rounded-sm bg-white">
-          <section className="w-full p-5 leading-8 border">
+          <section className="w-full p-5 leading-8 border ">
             <h2 className="text-4xl font-bold ">Brand New Collection </h2>
             <p>We Have The</p> <p>Treasure of Refurbished</p>
             <p>Printers & Scanners</p>{' '}
