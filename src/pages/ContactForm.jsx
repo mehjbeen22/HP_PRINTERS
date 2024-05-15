@@ -1,12 +1,15 @@
 import React from 'react';
 import NewArrivals from '../sections/NewArrivals';
-import NewsletterForm from '../sections/NewsletterForm';
+import NewsLetterForm from '../sections/NewsLetterForm';
 
 const ContactForm = () => {
   return (
     <>
       <main className="flex justify-center items-center bg-[#38bdf8]">
-        <div className="flex justify-between items-center gap-2 w-[80%] bg-white rounded-md m-4 shadow-2xl p-5 ">
+        <div
+          className="flex justify-between items-center gap-2 w-[80%] bg-white rounded-md m-4 
+        shadow-2xl md:p-5  p-4"
+        >
           {/* Image section */}
           <section className="hidden md:block w-[45%]">
             <img
@@ -18,7 +21,7 @@ const ContactForm = () => {
           </section>
 
           {/* Form section */}
-          <section className="w-full md:w-[65%] p-6 md:border-l-2 md:border-gray-400">
+          <section className="w-full md:w-[65%] md:p-6 md:border-l-2 md:border-gray-400">
             <form>
               <div className="mb-4">
                 <label
@@ -97,7 +100,7 @@ const ContactForm = () => {
 
       {/* Other components */}
       <NewArrivals />
-      <NewsletterForm />
+      <NewsLetterForm />
     </>
   );
 };

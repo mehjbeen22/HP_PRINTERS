@@ -62,7 +62,6 @@ const ProductAvailableSection = () => {
     <main className="px-8 py-6 bg-[#38bdf8] my-10">
       <div className="relative flex justify-center">
         <div
-          id="carousel-container"
           className="overflow-x-auto whitespace-nowrap"
           style={{ maxWidth: 'calc(100% - 2rem)' }}
         >

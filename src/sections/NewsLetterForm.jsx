@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const NewsletterForm = () => {
+export default function NewsLetterForm() {
   const [email, setEmail] = useState('');
 
   const handleChange = (event) => {
@@ -24,7 +24,7 @@ const NewsletterForm = () => {
         backgroundAttachment: 'fixed',
       }}
     >
-      <div className="bg-black bg-opacity-50 p-8 rounded-lg">
+      <div className="bg-black bg-opacity-50 p-20 rounded-lg ">
         <h1 className="text-2xl font-semibold mb-4">Newsletter Updates</h1>
         <p className="mb-4">
           Subscribe to receive emails on new product arrivals & special offers
@@ -49,6 +49,4 @@ const NewsletterForm = () => {
       </div>
     </div>
   );
-};
-
-export default NewsletterForm;
+}

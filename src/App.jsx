@@ -7,6 +7,12 @@ import Footer from './sections/Footer';
 import AboutUs from './pages/About';
 import IconBox from './pages/Service';
 import ContactForm from './pages/ContactForm';
+import ShopPage from './pages/ShopPage';
+import Disclaimer from './footer options pages/Disclaimer';
+import Faqs from './footer options pages/Faqs';
+import PrivacyPolicy from './footer options pages/PrivacyPolicy';
+import TermAndConditions from './footer options pages/TermAndCondition';
+import RefundAndReturn from './footer options pages/RefundAndReturn';
 
 const App = () => {
   return (
@@ -18,6 +24,12 @@ const App = () => {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/service" element={<IconBox />} />
           <Route path="/contact" element={<ContactForm />} />
+          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/faqs" element={<Faqs />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/t&c" element={<TermAndConditions />} />
+          <Route path="/refundAndreturn" element={<RefundAndReturn />} />
         </Routes>
         <Footer />
       </Router>
