@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { Disclosure } from '@headlessui/react';
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 import LoginSignupPage from './LoginSignUpPage';
+import { Link } from 'react-router-dom';
 const navigation = [
-  { name: 'HOME', href: '#' },
-  { name: 'ABOUT', href: '#' },
-  { name: 'SHOP', href: '#' },
-  { name: 'SERVICE', href: '#' },
-  { name: 'CONTACT', href: '#' },
+  { name: 'HOME', href: '/' },
+  { name: 'ABOUT', href: '/about' },
+  { name: 'SHOP', href: '/shop' },
+  { name: 'SERVICE', href: '/service' },
+  { name: 'CONTACT', href: '/contact' },
 ];
 
 function classNames(...classes) {
@@ -48,19 +49,19 @@ export default function Navbar() {
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className={classNames(
                           item.current
                             ? 'bg-gray-900 text-white'
-                            : ' hover:bg-[#60a5fa] border-b-2 border-black',
+                            : ' hover:bg-[#38bdf8] hover:text-white hover:rounded-md',
                           ' px-3 py-2 text-sm font-medium',
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -73,6 +74,7 @@ export default function Navbar() {
                   sx={{
                     height: '2rem',
                     width: '2rem',
+                    cursor: 'pointer',
                   }}
                 />
                 {/* ------------------------------ */}
@@ -81,6 +83,7 @@ export default function Navbar() {
                     marginRight: '15px',
                     height: '2rem',
                     width: '2rem',
+                    cursor: 'pointer',
                   }}
                   onClick={handleShowLoginModal}
                 />

@@ -8,20 +8,18 @@ export default function LoginSignupPage({ showModal, hideModal }) {
     <>
       <Modal show={showModal} onHide={hideModal}>
         <Modal.Header>
-          <Modal.Title className="border border-blue-50 w-[100%] gap-1 flex justify-around">
+          <Modal.Title className="border border-blue-50 w-[100%] gap-1 flex justify-around rounded-md">
             <button
               onClick={() => setShowSignup(true)}
-              className={`bg-[${
-                showSignup ? '#e2e8f0' : '#3182CE'
-              }] w-[50%] p-2`}
+              className=" w-[50%] p-2 rounded-md"
+              style={{ backgroundColor: showSignup ? '#60a5fa' : '' }}
             >
               LOGIN
             </button>
             <button
               onClick={() => setShowSignup(false)}
-              className={`bg-[${
-                showSignup ? '#3182CE' : '#e2e8f0'
-              }] w-[50%] p-2`}
+              className="w-[50%] p-2 rounded-md"
+              style={{ backgroundColor: showSignup ? '' : '#60a5fa' }}
             >
               SIGNUP
             </button>
