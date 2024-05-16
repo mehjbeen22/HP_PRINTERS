@@ -44,7 +44,7 @@ const Footer = () => {
           <div className="  p-4 text-white line">
             <h5 className="font-bold text-2xl mb-4">Quick links</h5>
             <ul className="leading-10">
-              <a href="#" className="underline hover:text-blue-500" href="#">
+              <a href="#" className="underline hover:text-blue-500">
                 Home
               </a>{' '}
               <br />
