@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 
 const ShopPage = () => {
   return (
-    <main className="bg-[#38bdf8] flex flex-col text-white justify-center items-center ">
+    <main className="bg-[#38bdf8] flex flex-col text-white justify-center items-center mt-16">
       <div className="m-3">
         <h1 className="text-6xl  text-center  border-b-4 border-black">
           Our Products

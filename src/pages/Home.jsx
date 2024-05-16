@@ -6,7 +6,7 @@ import WhyChooseUsSection from '../sections/WhyChooseUsSection';
 const Home = () => {
   return (
     <>
-      <div className=" flex justify-center items-center px-8 py-10 bg-[#38bdf8]">
+      <div className=" flex justify-center items-center mt-10 px-8 py-10 bg-[#38bdf8] h-[90vh]">
         <div className="aboutCase flex  w-full shadow-md rounded-sm bg-white">
           <section className="w-full p-5 leading-8 border ">
             <h2 className="text-4xl font-bold ">Brand New Collection </h2>
@@ -17,7 +17,7 @@ const Home = () => {
               In The World Of Endless Possibilities,Our Printers And Scanners
               Are Your Companions In Turning Dreams Into Reality.{' '}
             </p>{' '}
-            <button className=" hover:bg-red-500 bg-black text-white p-1 rounded mt-3 ">
+            <button className="bg-black text-white p-1 rounded mt-3 ">
               Explore Now
             </button>
           </section>

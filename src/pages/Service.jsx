@@ -4,7 +4,7 @@ import NewArrivals from '../sections/NewArrivals';
 const IconBox = () => {
   return (
     <>
-      <main className="flex  flex-col justify-center  items-center  bg-[#38bdf8] px-8 py-16">
+      <main className="flex  flex-col justify-center  mt-5 items-center  bg-[#38bdf8] px-8 py-16">
         <h1 className='text-6xl text-white border-b-4 border-black mb-8'>OUR SERVICES </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-[80%]">
           <div

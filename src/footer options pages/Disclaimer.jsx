@@ -1,6 +1,6 @@
 const Disclaimer = () => {
   return (
-    <div className="bg-[#38bdf8] pt-5">
+    <div className="bg-[#38bdf8] pt-5 mt-10">
       <div className="flex justify-center">
         <h1 className="text-6xl text-white  border-b-4 border-black ">
           Disclaimer

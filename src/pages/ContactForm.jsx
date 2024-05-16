@@ -5,7 +5,7 @@ import NewsLetterForm from '../sections/NewsLetterForm';
 const ContactForm = () => {
   return (
     <>
-      <main className="flex justify-center items-center bg-[#38bdf8]">
+      <main className="flex justify-center items-center bg-[#38bdf8] mt-16">
         <div
           className="flex justify-between items-center gap-2 w-[80%] bg-white rounded-md m-4 
         shadow-2xl md:p-5  p-4"

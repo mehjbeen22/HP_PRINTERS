@@ -14,7 +14,9 @@ const NewArrivals = () => {
               <p className="text-5xl font-bold my-3">New Arrivals</p>
             </div>
             <div className="flex justify-center items-center">
-              <button className="border-2 border-gray-500 p-2">View All</button>
+              <button className="border-2 border-gray-500 p-2 hover:border-none hover:bg-gray-500 hover:text-white">
+                View All
+              </button>
             </div>
           </section>
 

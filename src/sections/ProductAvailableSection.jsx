@@ -68,8 +68,8 @@ const ProductAvailableSection = () => {
           {array.map(({ id, imageUrl, heading }) => (
             <div
               key={id}
-              className="inline-block mx-4"
-              style={{ width: '20rem', transition: 'transform 0.3s' }}
+              className="inline-block mx-4 hover:scale-90 transition-transform duration-1000"
+              style={{ width: '20rem' }}
             >
               <Card>
                 <Card.Img variant="top" src={imageUrl} className="h-60" />
