@@ -1,6 +1,6 @@
 export default function RefundAndReturn() {
   return (
-    <div className="bg-[#38bdf8] pt-5 mt-10">
+    <div className="bg-[#38bdf8] pt-5 ">
       <div className="flex justify-center">
         <h1 className="text-6xl text-white border-b-4 border-black">
           Refund and Returns Policy
@@ -14,14 +14,14 @@ export default function RefundAndReturn() {
             rewarding experience while you’re exploring, evaluating, and
             purchasing our products. <br />
             As with any shopping experience, there are terms and conditions that
-            apply to transactions at 123hp-printer. We’ll be as brief as our
-            attorneys will allow. The main thing to remember is that by placing
-            an order or making a purchase at 123hp-printer, you agree to the
-            terms set forth below along with us Privacy Policy. <br /> If
-            there’s something wrong with the product you bought, or if you are
-            not happy with it, you have 15 days to issue a refund and return
-            your product. If you would like to return a product, the only way
-            would be if you follow the next guidelines:
+            apply to transactions at we are. We’ll be as brief as our attorneys
+            will allow. The main thing to remember is that by placing an order
+            or making a purchase at we are, you agree to the terms set forth
+            below along with us Privacy Policy. <br /> If there’s something
+            wrong with the product you bought, or if you are not happy with it,
+            you have 15 days to issue a refund and return your product. If you
+            would like to return a product, the only way would be if you follow
+            the next guidelines:
           </p>
           {refundPolicyArray.map(({ id, section, content }) => {
             return (
@@ -50,11 +50,11 @@ const refundPolicyArray = [
     id: 1,
     section: 'Refunds',
     content: [
-      `We at printexpress123, commit ourselves to serve our customers with the best products. Every single product that you choose is thoroughly inspected, checked for defects and packaged with utmost care. We do this to ensure that you fall in love with our products. 
+      `We at  Our Store, commit ourselves to serve our customers with the best products. Every single product that you choose is thoroughly inspected, checked for defects and packaged with utmost care. We do this to ensure that you fall in love with our products. 
 Sadly, there are times when we may not have the product(s) that you choose in stock, or may face some issues with our inventory and quality check. In such cases, we may have to cancel your order. You will be intimated about it in advance so that you don’t have.`,
 
       ` If you have purchased via Online payment (not Cash on Delivery), then you will be refunded once our team confirms your request.
-We carry out thorough quality checks before processing the ordered item. We take utmost care while packing the product. At the same time we ensure that the packing is good such that the items won’t get damaged during transit. Please note that printexpress123 is not liable for damages that are caused to the items during transit or transportation. 
+We carry out thorough quality checks before processing the ordered item. We take utmost care while packing the product. At the same time we ensure that the packing is good such that the items won’t get damaged during transit. Please note that  Our Store is not liable for damages that are caused to the items during transit or transportation. 
 We will revise your returned product as soon as we receive it and if it follows the guidelines addressed above, we will proceed to issue a refund of your purchase. Your refund may take a couple of days to process but you will be notified when you receive your money. `,
     ],
   },
@@ -81,7 +81,7 @@ We will revise your returned product as soon as we receive it and if it follows 
     id: 4,
     section: 'How to Return a Product:',
     content: [
-      'Email us at support@printexpress123.com and request a return within 15 days of receipt.',
+      'Email us at support@ Our Store.com and request a return within 15 days of receipt.',
       'Once approved, ship the item back to the designated warehouse fully insured with a trackable shipping method.',
     ],
   },
@@ -128,9 +128,9 @@ We will revise your returned product as soon as we receive it and if it follows 
     id: 10,
     section: ' Freight Forwarding Policy:',
     content: [
-      '123hp-printer is not responsible for damage or loss after acceptance by you or a freight forwarder.',
+      'we are is not responsible for damage or loss after acceptance by you or a freight forwarder.',
       'If goods arrive damaged, refuse them, and instruct your freight forwarder accordingly.',
-      'You or the freight forwarder are responsible for compliance with export and import regulations, and printexpress123 should not be listed on any export documents.',
+      'You or the freight forwarder are responsible for compliance with export and import regulations, and  Our Store should not be listed on any export documents.',
     ],
   },
   {

@@ -1,6 +1,6 @@
 export default function TermAndConditions() {
   return (
-    <div className="bg-[#38bdf8] pt-5 mt-10">
+    <div className="bg-[#38bdf8] pt-5 ">
       <div className="flex justify-center">
         <h1 className="text-6xl text-white border-b-4 border-black">
           Terms And Conditions
@@ -140,15 +140,5 @@ Entire Agreement
 The Agreement constitutes the entire agreement between you and Weregarding your use of the website and supersedes all prior and contemporaneous written or oral agreements between you and .
 You may be subject to additional terms and conditions that apply when you use or purchase other 
 ’s website, which Wewill provide to you at the time of such use or purchase.`,
-  },
-
-  {
-    id: 16,
-    section: 'Updates to Our Terms',
-    content: `We may change our website and policies, and we may need to make changes to these Terms so that they accurately reflect our website and policies. Unless otherwise required by law, we will notify you (for example, through our website) before we make changes to these Terms and give you an opportunity to review them before they go into effect. Then, if you continue to use the website, you will be bound by the updated Terms. If you do not want to agree to these or any updated Terms, you can delete your account.
-Intellectual Property
-The website and its entire contents, features and functionality (including but not limited to all information, software, text, displays, images, video and audio, and the design, selection and arrangement thereof), are owned by , its licensors or other providers of such material and are protected by US and international copyright, trademark, patent, trade secret and other intellectual property or proprietary rights laws. The material may not be copied, modified, reproduced, downloaded or distributed in any way, in whole or in part, without the express prior written permission of , unless and except as is expressly provided in these Terms & Conditions. Any unauthorized use of the material is prohibited.
-Notice of Dispute
-In the event of a dispute, you or Wemust give the other a Notice of Dispute, which is a written statement that sets forth the name, address, and contact information of the party giving it, the facts giving rise to the dispute, and the relief requested. You must send any Notice of Dispute via email to: support@.com. Wewill send any Notice of Dispute to you by mail to your address if we have it, or otherwise to your email address. You and Wewill attempt to resolve any dispute through informal negotiation within sixty (60) days from the date the Notice of Dispute is sent. After sixty (60) days, you or Wemay commence arbitration.`,
   },
 ];

@@ -4,8 +4,10 @@ import NewArrivals from '../sections/NewArrivals';
 const IconBox = () => {
   return (
     <>
-      <main className="flex  flex-col justify-center   items-center  bg-[#38bdf8] px-8 py-16">
-        <h1 className='text-6xl text-white border-b-4 border-black mb-8'>OUR SERVICES </h1>
+      <main className="flex  flex-col justify-center   items-center  bg-[#38bdf8] px-8 py-10">
+        <h1 className="text-6xl text-white border-b-4 border-black mb-8">
+          OUR SERVICES{' '}
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-[80%]">
           <div
             className="bg-white p-6 rounded-full text-black shadow-2xl hover:scale-105 transition-transform duration-1000"
@@ -51,9 +53,8 @@ const IconBox = () => {
             <div className="text-center mt-4">
               <h3 className="text-lg font-semibold">Tech Support</h3>
               <p className="mt-2">
-                Printexpress123 is your go-to solution for all things tech
-                support. Why? Because we’re not your average support team- we’re
-                the A team. Our tech wizards are the real deal, certified by
+                Our Shop is your go-to solution for all things tech support.
+                Why? . Our tech wizards are the real deal, certified by <br />
                 CompTia A+ to tackle any tech challenge comes their way.
               </p>
             </div>
@@ -133,9 +134,12 @@ const IconBox = () => {
             </p>
 
             <div>
-              <button className="border-2 border-gray-500 p-2 text-gray-600 hover:bg-black hover:text-white hover:border-none">
+              <a
+                href="#"
+                className="border-2 border-gray-500 p-2 text-gray-600 hover:bg-black hover:text-white hover:border-none"
+              >
                 MORE DETAILS
-              </button>
+              </a>
             </div>
           </section>
         </div>

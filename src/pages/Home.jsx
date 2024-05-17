@@ -18,8 +18,12 @@ const Home = () => {
           <section className="w-full p-5 leading-8  flex flex-col justify-center  ">
             <h2 className="text-4xl font-bold ">Diagnose and solve</h2>
             <p>
-              In this troubleshooting hub, you’ll find the top automated and
-              self-service solutions for common computer and printer problems.
+              "Welcome to our printing service, where excellence meets
+              innovation. Explore top-quality printers from leading brands like
+              HP, delivering exceptional performance. With 24/7 support, your
+              printing experience is seamless. Start your journey today, and
+              discover automated solutions for common computer and printer
+              issues."
             </p>
             <div>
               <button className="bg-black text-white p-1 rounded mt-3  px-3">
