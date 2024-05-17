@@ -1,7 +1,27 @@
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
+import Swal from 'sweetalert2';
 
 const NewArrivals = () => {
+  const { cart, addToCart } = useCart();
+
+  const handleAddToCart = (product) => {
+    const isItemInCart = cart.some((item) => item.id === product.id);
+    if (isItemInCart) {
+      Swal.fire({
+        title: 'Item already in cart',
+        text: 'This item is already in your cart.',
+        icon: 'warning',
+        confirmButtonText: 'OK',
+      });
+    } else {
+      addToCart(product);
+    }
+  };
+
   return (
     <div className="container text-center">
       <main className="p-4 my-10">
@@ -14,9 +34,12 @@ const NewArrivals = () => {
               <p className="text-5xl font-bold my-3">New Arrivals</p>
             </div>
             <div className="flex justify-center items-center">
-              <button className="border-2 border-gray-500 p-2 hover:border-none hover:bg-gray-500 hover:text-white">
+              <Link
+                to="/shop"
+                className="border-2 border-gray-500 p-2 hover:border-none hover:bg-gray-500 hover:text-white"
+              >
                 View All
-              </button>
+              </Link>
             </div>
           </section>
 
@@ -45,6 +68,15 @@ const NewArrivals = () => {
                       <Button
                         variant="primary"
                         className="bg-red-500 border-0 rounded-none"
+                        onClick={() =>
+                          handleAddToCart({
+                            id,
+                            productName,
+                            price,
+                            imageUrl,
+                            type,
+                          })
+                        }
                       >
                         ADD TO CART
                       </Button>

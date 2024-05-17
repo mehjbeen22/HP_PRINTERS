@@ -34,7 +34,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="container mt-10 p-4 bg-[#38bdf8]">
+    <div className="container p-4 bg-[#38bdf8]">
       <div className="mt-10 bg-white p-2 mx-auto w-full flex rounded-sm">
         <div className="w-full">
           <h1 className="text-3xl font-bold mb-6 text-center">Your Cart</h1>
