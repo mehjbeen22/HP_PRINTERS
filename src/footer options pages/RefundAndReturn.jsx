@@ -81,7 +81,7 @@ We will revise your returned product as soon as we receive it and if it follows 
     id: 4,
     section: 'How to Return a Product:',
     content: [
-      'Email us at support@ Our Store.com and request a return within 15 days of receipt.',
+      'Email us at support@printermartsolution.com Our Store.com and request a return within 15 days of receipt.',
       'Once approved, ship the item back to the designated warehouse fully insured with a trackable shipping method.',
     ],
   },
