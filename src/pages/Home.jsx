@@ -17,7 +17,7 @@ const Home = () => {
               In The World Of Endless Possibilities,Our Printers And Scanners
               Are Your Companions In Turning Dreams Into Reality.{' '}
             </p>{' '}
-            <button className="bg-black text-white p-1 rounded mt-3 ">
+            <button className="bg-black text-white p-1 rounded mt-3  px-3">
               Explore Now
             </button>
           </section>

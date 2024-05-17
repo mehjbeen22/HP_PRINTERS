@@ -1,12 +1,30 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useCart } from '../context/CartContext';
+import Swal from 'sweetalert2';
 
 const ShopPage = () => {
+  const { cart, addToCart } = useCart();
+
+  const handleAddToCart = (product) => {
+    const isItemInCart = cart.some((item) => item.id === product.id);
+    if (isItemInCart) {
+      Swal.fire({
+        title: 'Item already in cart',
+        text: 'This item is already in your cart.',
+        icon: 'warning',
+        confirmButtonText: 'OK',
+      });
+    } else {
+      addToCart(product);
+    }
+  };
+
   return (
     <main className="bg-[#38bdf8] flex flex-col text-white justify-center items-center mt-16">
       <div className="m-3">
-        <h1 className="text-6xl  text-center  border-b-4 border-black">
+        <h1 className="text-6xl text-center border-b-4 border-black">
           Our Products
         </h1>
       </div>
@@ -38,10 +56,12 @@ const ShopPage = () => {
                   </div>
                   <p className="text-gray-600 font-bold mb-2">{category}</p>
                   <div className="flex items-center">
-                    {/* You can adjust the button styling as per your preference */}
                     <Button
                       variant="primary"
                       className="bg-red-500 border-0 rounded-none"
+                      onClick={() =>
+                        handleAddToCart({ id, name, currentPrice, image })
+                      }
                     >
                       ADD TO CART
                     </Button>

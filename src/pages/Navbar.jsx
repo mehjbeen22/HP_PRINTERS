@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import LocalMallIcon from '@mui/icons-material/LocalMall';
 import LoginSignupPage from './LoginSignUpPage';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
+import { FaShoppingCart } from 'react-icons/fa';
 
 const navigation = [
   { name: 'HOME', href: '/', current: true },
@@ -21,6 +22,8 @@ function classNames(...classes) {
 export default function Navbar() {
   const [navItems, setNavItems] = useState(navigation);
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const { cart } = useCart();
+  const navigate = useNavigate();
 
   const handleShowLoginModal = () => {
     setShowLoginModal(true);
@@ -38,6 +41,10 @@ export default function Navbar() {
     setNavItems(updatedNavItems);
   };
 
+  const navigateToCart = () => {
+    navigate('/cart');
+  };
+
   return (
     <div className="navbar-wrapper fixed top-0 w-full z-50 bg-white">
       <Disclosure as="nav">
@@ -46,7 +53,7 @@ export default function Navbar() {
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
               <div className="relative flex h-16 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  {/* Mobile menu button*/}
+                  {/* Mobile menu button */}
                   <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="absolute -inset-0.5" />
                     <span className="sr-only">Open main menu</span>
@@ -67,7 +74,7 @@ export default function Navbar() {
                           className={classNames(
                             item.current
                               ? 'bg-gray-900 text-white'
-                              : ' hover:bg-[#38bdf8] hover:text-white hover:rounded-md',
+                              : 'hover:bg-[#38bdf8] hover:text-white hover:rounded-md',
                             'px-3 py-2 text-sm font-medium',
                           )}
                           aria-current={item.current ? 'page' : undefined}
@@ -79,20 +86,20 @@ export default function Navbar() {
                     </div>
                   </div>
                 </div>
-                <div
-                  className="absolute inset-y-0 right-0 flex gap-5 items-center 
-                pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-                >
-                  <LocalMallIcon
-                    sx={{
-                      height: '2rem',
-                      width: '2rem',
-                      cursor: 'pointer',
-                    }}
-                  />
-                  {/* ------------------------------ */}
+                <div className="absolute inset-y-0 right-0 flex gap-5 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                  <div className="relative">
+                    <FaShoppingCart
+                      className="text-2xl cursor-pointer"
+                      onClick={navigateToCart}
+                    />
+                    {cart.length > 0 && (
+                      <span className="absolute top-[-10px] right-[-10px] inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
+                        {cart.length}
+                      </span>
+                    )}
+                  </div>
                   <AccountCircleIcon
-                    sx={{
+                    style={{
                       marginRight: '15px',
                       height: '2rem',
                       width: '2rem',
@@ -100,12 +107,10 @@ export default function Navbar() {
                     }}
                     onClick={handleShowLoginModal}
                   />
-                  {/* Login/Signup Modal */}
                   <LoginSignupPage
                     showModal={showLoginModal}
                     hideModal={handleCloseLoginModal}
                   />
-                  {/* -------------------------- */}
                 </div>
               </div>
             </div>

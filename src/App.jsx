@@ -13,26 +13,30 @@ import Faqs from './footer options pages/Faqs';
 import PrivacyPolicy from './footer options pages/PrivacyPolicy';
 import TermAndConditions from './footer options pages/TermAndCondition';
 import RefundAndReturn from './footer options pages/RefundAndReturn';
-
+import { CartProvider } from './context/CartContext';
+import Cart from './pages/Cart';
 const App = () => {
   return (
     <>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/service" element={<IconBox />} />
-          <Route path="/contact" element={<ContactForm />} />
-          <Route path="/shop" element={<ShopPage />} />
-          <Route path="/disclaimer" element={<Disclaimer />} />
-          <Route path="/faqs" element={<Faqs />} />
-          <Route path="/privacy" element={<PrivacyPolicy />} />
-          <Route path="/t&c" element={<TermAndConditions />} />
-          <Route path="/refundAndreturn" element={<RefundAndReturn />} />
-        </Routes>
-        <Footer />
-      </Router>
+      <CartProvider>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/service" element={<IconBox />} />
+            <Route path="/contact" element={<ContactForm />} />
+            <Route path="/shop" element={<ShopPage />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/faqs" element={<Faqs />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/t&c" element={<TermAndConditions />} />
+            <Route path="/refundAndreturn" element={<RefundAndReturn />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+          <Footer />
+        </Router>
+      </CartProvider>
     </>
   );
 };
