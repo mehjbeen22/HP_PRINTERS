@@ -4,8 +4,8 @@ import TestimonialPage from '../sections/Testimonial';
 export default function AboutUs() {
   return (
     <>
-      <div className=" flex justify-center items-center mt-16 px-8 py-6 bg-[#38bdf8]">
-        <div className="aboutCase flex  w-full shadow-md rounded-sm bg-white">
+      <div className=" flex justify-center items-center  px-8 py-6 bg-[#38bdf8]">
+        <div className="aboutCase flex  w-full shadow-md  mt-3 rounded-sm bg-white">
           <section className="w-full p-5 md:text-center">
             <h2 className="text-4xl font-bold text-center">ABOUT US </h2>
             <p className="mt-3 text-center">

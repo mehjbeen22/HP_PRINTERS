@@ -22,14 +22,14 @@ const ShopPage = () => {
   };
 
   return (
-    <main className="bg-[#38bdf8] flex flex-col text-white justify-center items-center mt-16">
-      <div className="m-3">
+    <main className="bg-[#38bdf8] flex flex-col text-white justify-center items-center ">
+      <div className="m-4">
         <h1 className="text-6xl text-center border-b-4 border-black">
           Our Products
         </h1>
       </div>
 
-      <section className="grid grid-cols-4 gap-3 w-[95%] py-5 bg-white px-4 rounded shadow-2xl">
+      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 w-[95%] py-5 bg-white px-4 rounded shadow-2xl">
         {products.map(
           ({ id, name, originalPrice, currentPrice, category, image }) => {
             return (
