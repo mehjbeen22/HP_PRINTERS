@@ -67,7 +67,7 @@ const Footer = () => {
           </div>
           <div className="p-4 text-white  leading-10">
             <h5 className="font-bold mb-4 text-2xl">Contact Us</h5>
-            <p>Email: support@printexpress123.com</p>
+            <p>Email: support@printermartsolution.com</p>
             <p>New York, 96th Street, NY 10121</p>
           </div>
         </div>
@@ -75,7 +75,7 @@ const Footer = () => {
       <div className="container  p-10  bg-black">
         <div className="text-center ">
           <p className="text-gray-300">
-            Copyright © 2024 - printexpress123.com
+            Copyright © 2024 - printermartsolution.com
           </p>
         </div>
       </div>
