@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useCart } from '../context/CartContext';
 import LoginSignupPage from './LoginSignUpPage';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import { FaBars } from 'react-icons/fa';
 
 const Navbar = () => {
   const navigation = [
@@ -20,6 +22,12 @@ const Navbar = () => {
 
   const handleShowLoginModal = () => {
     setShowLoginModal(true);
+  };
+
+  const [showList, setShowList] = useState(false);
+
+  const toggleList = () => {
+    setShowList(!showList);
   };
 
   const handleCloseLoginModal = () => {
@@ -40,7 +48,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full">
-      <div className="flex items-center justify-around px-2 py-3 ">
+      <div className="flex items-center justify-between md:justify-around px-2 py-3">
         {/* Logo */}
         <div>
           <img
@@ -72,35 +80,65 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* ---- CART & Login/Signup ---- */}
+        {/* Cart & Login/Signup */}
         <div className="flex items-center space-x-4">
-          {/* Cart */}
-          <FaShoppingCart
-            className="text-gray-800 text-2xl cursor-pointer hover:text-gray-900 transition duration-300"
-            onClick={navigateToCart}
-          />
-
-          {cart.length > 0 && (
-            <span className="absolute top-[18px] right-[310px] -mt-1 -mr-1 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
-              {cart.length}
-            </span>
-          )}
+          <div className="relative">
+            <FaShoppingCart
+              className="text-gray-800 text-3xl cursor-pointer hover:text-blue-600 transition duration-300"
+              onClick={navigateToCart}
+            />
+            {cart.length > 0 && (
+              <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full transform translate-x-1/2 -translate-y-1/2">
+                {cart.length}
+              </span>
+            )}
+          </div>
 
           {/* Login/Signup */}
-          <button
-            className="text-white bg-black px-4 py-2 rounded-sm hover:bg-blue-600 transition duration-300"
+          <AccountBoxIcon
+            sx={{ fontSize: '35px' }}
+            className="cursor-pointer hover:text-blue-600 transition duration-300"
             onClick={handleShowLoginModal}
-          >
-            Login / Signup
-          </button>
+          />
           <LoginSignupPage
             showModal={showLoginModal}
             hideModal={handleCloseLoginModal}
           />
+
+          {/* Hamburger Menu */}
+          <FaBars
+            className="sm:hidden text-gray-800 text-3xl cursor-pointer hover:text-blue-600 transition duration-300"
+            onClick={toggleList}
+          />
         </div>
       </div>
 
-      <ul className=" flex items-center justify-center space-x-6 bg-black px-2 py-3">
+      {/* Mobile Menu */}
+      <ul
+        className={`flex flex-col items-center justify-center space-y-2 bg-black px-2 py-3 sm:hidden transition duration-300 ease-in-out ${
+          showList ? 'block' : 'hidden'
+        }`}
+      >
+        {navItems.map(({ name, link, current }, index) => (
+          <li key={name}>
+            <Link
+              to={link}
+              className={`text-white hover:text-gray-300 ${
+                current
+                  ? 'bg-gray-900 text-white'
+                  : 'hover:bg-[#38bdf8] hover:text-white hover:rounded-md'
+              } px-3 py-2 text-sm font-medium`}
+              aria-current={current ? 'page' : undefined}
+              onClick={() => handleLinkClick(index)}
+            >
+              {name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+
+      {/* Desktop Menu */}
+      <ul className="hidden sm:flex items-center justify-center space-x-6 bg-black px-2 py-3">
         {navItems.map(({ name, link, current }, index) => (
           <li key={name}>
             <Link

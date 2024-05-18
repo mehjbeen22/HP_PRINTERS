@@ -97,7 +97,7 @@ const CartItem = ({ item, removeItem, updateQuantity }) => {
 
   useEffect(() => {
     updateQuantity(item.id, productCount);
-  }, [productCount]);
+  }, [productCount, updateQuantity]); // Added updateQuantity to the dependency array
 
   const handleDecreaseProductCount = () => {
     if (productCount !== 1) setProductCount(productCount - 1);
