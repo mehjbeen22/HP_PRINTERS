@@ -51,11 +51,11 @@ const Navbar = () => {
       <div className="flex items-center justify-between md:justify-around px-2 py-3">
         {/* Logo */}
         <div>
-          <img
+          {/* <img
             src="https://i.ibb.co/FW9Br64/hp-logo-removebg-preview.png"
             alt="HP Logo"
             className="h-12"
-          />
+          /> */}
         </div>
 
         {/* Center Div - Links */}
