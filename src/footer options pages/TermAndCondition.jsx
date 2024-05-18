@@ -6,7 +6,7 @@ export default function TermAndConditions() {
           Terms And Conditions
         </h1>
       </div>
-      <div className="p-16">
+      <div className="py-10 px-2">
         <div className="flex justify-center flex-col p-5 shadow-2xl border border-gray-200 rounded-sm bg-white">
           <p>
             By accessing and placing an order with , you confirm that you are in

@@ -6,7 +6,7 @@ export default function PrivacyPolicy() {
           Privacy Policy
         </h1>
       </div>
-      <div className="p-16">
+      <div className="py-10 px-2">
         <div className="flex justify-center flex-col p-5 shadow-2xl border border-gray-200 rounded-sm bg-white">
           <p>
             Our Store (“we,” “our,” or “us”) is committed to protecting your

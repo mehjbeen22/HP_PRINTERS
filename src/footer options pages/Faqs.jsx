@@ -4,7 +4,7 @@ export default function Faqs() {
       <div className="flex justify-center">
         <h1 className="text-6xl text-white border-b-4 border-black">FAQ'S</h1>
       </div>
-      <div className="p-16">
+      <div className="py-10 px-2">
         <div className="flex justify-center flex-col p-5 shadow-2xl border border-gray-200 rounded-sm bg-white">
           {faqsArray.map(({ id, ques, ans }) => {
             return (
