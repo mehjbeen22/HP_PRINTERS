@@ -10,19 +10,21 @@ const Cart = () => {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
+    setCartArray(cart);
+  }, [cart]);
+
+  useEffect(() => {
     const subtotalValue = calculateSubtotal(cartArray);
     const totalValue = calculateTotal(cartArray);
     setSubtotal(subtotalValue);
     setTotal(totalValue);
   }, [cartArray]);
 
-  // Function to remove an item from the cart
   const removeItem = (itemId) => {
     const updatedCart = cartArray.filter((item) => item.id !== itemId);
     setCartArray(updatedCart);
   };
 
-  // Function to update quantity of an item in the cart
   const updateQuantity = (itemId, quantity) => {
     const updatedCart = cartArray.map((item) => {
       if (item.id === itemId) {
@@ -31,6 +33,10 @@ const Cart = () => {
       return item;
     });
     setCartArray(updatedCart);
+  };
+
+  const handleCheckout = () => {
+    // Implement checkout logic
   };
 
   return (
@@ -49,7 +55,7 @@ const Cart = () => {
               </p>
             </div>
           ) : (
-            <div className="flex">
+            <div className="flex flex-col">
               <ul className=" divide-y divide-gray-200">
                 {cartArray.map((item, index) => (
                   <CartItem
@@ -61,28 +67,24 @@ const Cart = () => {
                 ))}
               </ul>
 
-              <div className="w-1/2 mt-10 pl-4">
-                {cartArray.length !== 0 && (
-                  <div className="border p-4 rounded-lg shadow-lg">
-                    <h3 className="text-xl font-semibold mb-4">Cart Totals</h3>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="border border-dashed border-gray-400 p-4 rounded-lg">
-                        <p className="font-semibold">Subtotal</p>
-                        <p className="text-gray-700">${subtotal}</p>
-                      </div>
-                      <div className="border border-dashed border-gray-400 p-4 rounded-lg">
-                        <p className="font-semibold">Total</p>
-                        <p className="text-gray-700">${total}</p>
-                      </div>
-                    </div>
-                    <button
-                      className="mt-4 px-4 py-2 bg-black text-white rounded-sm hover:bg-red-500"
-                      onClick={handleCheckout}
-                    >
-                      Proceed to Checkout
-                    </button>
+              <div className="border p-4 rounded-lg shadow-lg mt-4">
+                <h3 className="text-xl font-semibold mb-4">Cart Totals</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="border border-dashed border-gray-400 p-4 rounded-lg">
+                    <p className="font-semibold">Subtotal</p>
+                    <p className="text-gray-700">${subtotal}</p>
                   </div>
-                )}
+                  <div className="border border-dashed border-gray-400 p-4 rounded-lg">
+                    <p className="font-semibold">Total</p>
+                    <p className="text-gray-700">${total}</p>
+                  </div>
+                </div>
+                <button
+                  className="mt-4 px-4 py-2 bg-black text-white rounded-sm hover:bg-red-500"
+                  onClick={handleCheckout}
+                >
+                  Proceed to Checkout
+                </button>
               </div>
             </div>
           )}
@@ -97,7 +99,7 @@ const CartItem = ({ item, removeItem, updateQuantity }) => {
 
   useEffect(() => {
     updateQuantity(item.id, productCount);
-  }, [productCount, updateQuantity]); // Added updateQuantity to the dependency array
+  }, [productCount, updateQuantity]);
 
   const handleDecreaseProductCount = () => {
     if (productCount !== 1) setProductCount(productCount - 1);
@@ -108,41 +110,41 @@ const CartItem = ({ item, removeItem, updateQuantity }) => {
   };
 
   return (
-    <li className="flex items-center py-4 px-6">
-      <div className="flex items-center w-full">
+    <li className="flex flex-col md:flex-row items-center py-4 px-6 border-b border-gray-200">
+      <div className="flex flex-grow items-center mb-4 md:mb-0">
         <img
           src={item.image}
           alt={item.name}
           className="w-16 h-16 object-cover mr-4 rounded"
         />
-        <div className="w-2/3">
+        <div className="flex flex-col justify-center">
           <p className="font-semibold">{item.name}</p>
           <p className="text-gray-500">${item.currentPrice}</p>
         </div>
+      </div>
 
-        <div className="flex justify-end items-center">
-          <div className="border border-red-700 flex items-center">
-            <button
-              className="text-2xl text-green-600 cursor-pointer px-3 py-1"
-              onClick={handleIncreaseProductCount}
-            >
-              +
-            </button>
-            <span className="text-lg mx-2">{productCount}</span>
-            <button
-              className="text-2xl text-red-600 cursor-pointer px-3 py-1"
-              onClick={handleDecreaseProductCount}
-            >
-              -
-            </button>
-          </div>
-          <div className="text-right ml-4 flex gap-4">
-            <p className="font-semibold">${item.currentPrice * productCount}</p>
-            <DeleteIcon
-              onClick={() => removeItem(item.id)}
-              className="cursor-pointer text-gray-500"
-            />
-          </div>
+      <div className="flex items-center">
+        <div className="flex items-center mr-4">
+          <button
+            className="text-2xl text-green-600 cursor-pointer px-3 py-1"
+            onClick={handleDecreaseProductCount}
+          >
+            -
+          </button>
+          <span className="text-lg mx-2">{productCount}</span>
+          <button
+            className="text-2xl text-green-600 cursor-pointer px-3 py-1"
+            onClick={handleIncreaseProductCount}
+          >
+            +
+          </button>
+        </div>
+        <div className="flex gap-4">
+          <p className="font-semibold">${item.currentPrice * productCount}</p>
+          <DeleteIcon
+            onClick={() => removeItem(item.id)}
+            className="cursor-pointer text-gray-500"
+          />
         </div>
       </div>
     </li>
@@ -158,10 +160,6 @@ const calculateSubtotal = (cart) => {
 
 const calculateTotal = (cart) => {
   return calculateSubtotal(cart);
-};
-
-const handleCheckout = () => {
-  // Implement checkout logic
 };
 
 export default Cart;
