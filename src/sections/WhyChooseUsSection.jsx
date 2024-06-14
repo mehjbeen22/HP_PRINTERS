@@ -15,14 +15,13 @@ const WhyChooseUsSection = () => {
           <div className="lg:w-1/2 bg-black text-white  p-10">
             <h2 className="text-3xl font-bold mb-4">Why Choose us?</h2>
             <p className="text-lg mb-6">
-              Choose us for top-quality printers from leading brands, engineered
-              for exceptional performance and reliability. Benefit from our
-              expert support available 24/7, ensuring seamless and efficient
-              printing solutions. With our commitment to your satisfaction,
-              you're not just buying a printer; you're investing in superior
-              service and technology.
+              Choose us for top-quality refurbished printers, meticulously
+              inspected and tested for exceptional performance and reliability.
+              Benefit from our expert support available 24/7, ensuring seamless
+              and efficient printing solutions. With our commitment to your
+              satisfaction, you're not just buying a printer; you're investing
+              in superior service and technology.
             </p>
-            
           </div>
         </div>
       </div>

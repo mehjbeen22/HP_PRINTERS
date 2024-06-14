@@ -2,6 +2,7 @@ import InstantSupport from '../sections/InstantSupport';
 import NewArrivals from '../sections/NewArrivals';
 import ProductAvailableSection from '../sections/ProductAvailableSection';
 import WhyChooseUsSection from '../sections/WhyChooseUsSection';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -18,18 +19,18 @@ const Home = () => {
           <section className="w-full p-5 leading-8  flex flex-col justify-center  ">
             <h2 className="text-4xl font-bold ">Diagnose and solve</h2>
             <p>
-              "Welcome to our printing service, where excellence meets
-              innovation. Explore top-quality printers from leading brands like
-              HP, delivering exceptional performance. With 24/7 support, your
-              printing experience is seamless. Start your journey today, and
-              discover automated solutions for common computer and printer
-              issues."
+              "Welcome to our refurbished printer service, where excellence
+              meets innovation. Discover top-quality refurbished printers from
+              leading brands like HP, known for exceptional performance. With
+              24/7 support, we ensure your refurbished printing experience is
+              seamless. Start your journey today and explore automated solutions
+              for common computer and printer issues."
             </p>
-            <div>
+            <Link to="/service">
               <button className="bg-black text-white p-1 rounded mt-3  px-3">
                 Explore Now
               </button>
-            </div>
+            </Link>
           </section>
         </div>
       </div>

@@ -13,7 +13,6 @@ const Navbar = () => {
     { name: 'Shop', link: '/shop', current: false },
     { name: 'Service', link: '/service', current: false },
     { name: 'Contact', link: '/contact', current: false },
-    { name: 'My HP Account', link: '/', current: false },
   ];
   const [navItems, setNavItems] = useState(navigation);
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -73,7 +72,7 @@ const Navbar = () => {
             Shop
           </Link>
           <Link
-            to="/"
+            to="/contact"
             className="text-gray-800 hover:text-gray-900 transition duration-300"
           >
             Support

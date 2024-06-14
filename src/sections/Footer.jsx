@@ -8,10 +8,10 @@ const Footer = () => {
           <div className="  p-4 text-white">
             <h5 className="font-bold text-2xl mb-4">About Us</h5>
             <p>
-              We provide top-quality printers from leading brands like HP,
-              ensuring cutting-edge technology for reliable performance. With
-              24/7 support, we're your trusted partner for all your printing
-              needs.
+              We offer top-quality refurbished printers from leading brands like
+              HP, featuring cutting-edge technology for reliable performance.
+              With 24/7 support, we're your trusted partner for all your
+              refurbished printing needs.
             </p>
           </div>
           <div className="  p-4 text-white">

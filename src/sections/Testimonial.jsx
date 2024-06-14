@@ -12,22 +12,57 @@ export default function TestimonialPage() {
           </section>
 
           <section className="w-full md:w-1/2 flex flex-col justify-center px-8 py-6">
-            <h2 className="text-3xl font-semibold mb-4">Testimonials</h2>
-            <p className="text-lg font-semibold mb-4">
-              I have purchased a printer from PrintExpress. The quality and
-              delivery time were awesome. Their executive helped me to install
-              and solve my printing problems. Highly recommended for future
-              purchases.
-            </p>
-            <div className="flex items-center">
-              <img
-                decoding="async"
-                src="https://printexpress123.com/wp-content/uploads/2021/12/testimonial-avatar_optimized.webp"
-                className="w-16 h-16 rounded-full mr-4"
-                alt=""
-              />
-              <p className="text-xl font-semibold">Jane Blayck</p>
+            {/* ---------------------------------------- */}
+            <div class="mb-6">
+              <h3 class="text-xl font-semibold text-gray-700 mb-2">
+                What We Offer
+              </h3>
+              <ul class="list-disc list-inside text-gray-600">
+                <li>
+                  High-Quality Refurbished Printers: Rigorously tested to meet
+                  stringent quality standards.
+                </li>
+                <li>
+                  Cost-Effective Solutions: Significant savings without
+                  sacrificing performance.
+                </li>
+                <li>
+                  Eco-Friendly Options: Reduce electronic waste with
+                  environmentally conscious choices.
+                </li>
+                <li>
+                  Comprehensive Warranty: Six-month warranty on all refurbished
+                  printers.
+                </li>
+                <li>
+                  Exceptional Customer Support: Dedicated team for prompt
+                  assistance and satisfaction.
+                </li>
+              </ul>
             </div>
+
+            <div class="mb-6">
+              <h3 class="text-xl font-semibold text-gray-700 mb-2">
+                Warranty and Returns
+              </h3>
+              <p class="text-gray-600">
+                All refurbished printers come with a six-month warranty covering
+                defects under normal use. Visit our Returns page for clear and
+                fair return policies.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold text-gray-700 mb-2">
+                Our Commitment
+              </h3>
+              <p class="text-gray-600">
+                More than a supplier, we're your partners in efficient,
+                eco-friendly printing solutions. Our dedication to quality,
+                affordability, and sustainability ensures your satisfaction.
+              </p>
+            </div>
+            {/* ---------------------------------------- */}
           </section>
         </div>
       </div>
