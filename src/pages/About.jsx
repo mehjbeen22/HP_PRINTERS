@@ -11,10 +11,6 @@ export default function AboutUs() {
               Welcome To Printer Mart Solution
             </h2>
             <div className="mt-3 ">
-              <h2 class="text-3xl font-semibold text-gray-800 mb-4">
-                Welcome To Printer Mart Solution
-              </h2>
-
               <div class="mb-6">
                 <h3 class="text-xl font-semibold text-gray-700 mb-2">
                   About Us
