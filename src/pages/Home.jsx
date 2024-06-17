@@ -20,11 +20,11 @@ const Home = () => {
             <h2 className="text-4xl font-bold ">Diagnose and solve</h2>
             <p>
               "Welcome to our refurbished printer service, where excellence
-              meets innovation. Discover top-quality refurbished printers from
-              leading brands like HP, known for exceptional performance. With
-              24/7 support, we ensure your refurbished printing experience is
-              seamless. Start your journey today and explore automated solutions
-              for common computer and printer issues."
+              meets innovation. Explore top-quality printers known for
+              exceptional performance. With round-the-clock support, we
+              guarantee a seamless refurbished printing experience. Start today
+              and find automated solutions for common computer and printer
+              issues."
             </p>
             <Link to="/service">
               <button className="bg-black text-white p-1 rounded mt-3  px-3">
